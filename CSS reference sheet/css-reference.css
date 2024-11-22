@@ -1,0 +1,268 @@
+/* General Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background: #1d1d1d;
+    color: #d1d1d1;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    color: #ff9ff3;
+    text-shadow: 2px 2px 8px rgba(255, 159, 243, 0.8);
+}
+h2 {
+    font-size: 2.5rem;
+    color: #00d2d3;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-shadow: 1px 1px 6px rgba(0, 210, 211, 0.6);
+}
+
+/* General Styling for the Underline Section */
+#underline-examples {
+    padding: 30px;
+    text-align: center;
+    background: #131212;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 30px 0;
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+#underline-examples p {
+    font-size: 24px;
+    margin: 25px 15px;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 15px;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 1px 1px 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Solid Gradient Underline */
+.solid-underline {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #ff6f61;
+}
+
+/* Animated Gradient Underline */
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, #48c6ef, #6f86d6);
+    transition: width 0.4s ease;
+}
+
+.animated-underline:hover::after {
+    width: 100%;
+}
+
+/* Wavy Colorful Underline */
+.wavy-underline {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #00ffb9;
+    font-style: italic;
+}
+
+/* Typography */
+.typography-example {
+    font-size: 20px;
+    font-family: 'Courier New', monospace;
+    color: #4cd137;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.8;
+    background: #1e272e;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Pseudo-classes */
+.hover-btn {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+.hover-btn:hover {
+    background: linear-gradient(to right, #ff6b6b, #ff5050);
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Focus Input */
+.focus-input {
+    padding: 10px;
+    border: 2px solid #57606f;
+    border-radius: 5px;
+    background-color: #353b48;
+    color: #fff;
+}
+.focus-input:focus {
+    border-color: #00a8ff;
+    box-shadow: 0 0 10px rgba(0, 168, 255, 0.5);
+}
+
+/* nth-child Example */
+.nth-child-example li {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.nth-child-example li:nth-child(odd) {
+    background: linear-gradient(to right, #1e90ff, #87cefa);
+}
+.nth-child-example li:nth-child(even) {
+    background: linear-gradient(to right, #32cd32, #98fb98);
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    background-color: #2f3640;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.1);
+}
+.grid-item {
+    background: linear-gradient(to bottom, #e1eec3, #f05053);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s;
+}
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Animations */
+.animated-box {
+    width: 100px;
+    height: 100px;
+    background-color: #9c88ff;
+    border-radius: 10px;
+    margin: 10px auto;
+    animation: bounce-animation 2s infinite alternate;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.horizontal-box {
+    width: 100px;
+    height: 100px;
+    background-color: #3dc1d3;
+    border-radius: 10px;
+    margin: 10px auto;
+    animation: move-animation 3s infinite alternate;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+@keyframes bounce-animation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(15px);
+    }
+}
+
+@keyframes move-animation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(120px);
+    }
+}
+
+/* Positioning */
+.position-container {
+    position: relative;
+    height: 300px;
+    border: 2px dashed #7f8fa6;
+    border-radius: 10px;
+    background-color: #2f3640;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+}
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #273c75;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.relative-box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: #44bd32;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.fixed-box {
+    position: fixed;
+    top: 50px;
+    right: 10px;
+    background: #e84118;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background: #fbc531;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .mobile-preview {
+        background-color: #576574;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+/* Jedi Font color */
+.font-color {
+    color: rgb(255, 92, 92);
+    text-shadow: 1px 1px 6px rgba(228, 10, 191, 0.5);
+}
